@@ -1,0 +1,26 @@
+<div class="panel panel-default user-form" ng-controller="FormController">
+    <form>
+
+        <div class="form-group">
+            <label for="userName">User name</label>
+            <input ng-model="user.name" ng-disabled="!isEditing" type="text" class="form-control" id="userName" placeholder="Enter user name">
+        </div>
+
+        <div class="form-group">
+            <label for="userAdmin">Is Admin</label>
+            <div>
+                <input ng-model="user.isAdmin" ng-disabled="!isEditing" type="checkbox" id="userAdmin">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="userRank">Rank</label>
+            <input ng-model="user.rank" ng-disabled="!isEditing" type="number" class="form-control" id="userRank" placeholder="Enter rank">
+        </div>
+
+        <button ng-if="!isEditing" ng-click="edit()" type="submit" class="btn btn-primary">Edit</button>
+        <button ng-if="isEditing" ng-click="save()" type="submit" class="btn btn-primary">Save</button>
+        <button ng-if="isEditing" ng-click="cancel()" type="submit" class="btn btn-default">Cancel</button>
+        <button ng-if="isEditing" ng-click="remove()" type="submit" class="btn btn-danger pull-right">Remove</button>
+    </form>
+</div>

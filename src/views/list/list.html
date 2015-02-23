@@ -1,0 +1,12 @@
+<div class="user-list" ng-controller="ListController">
+    <ul class="list-group">
+        <li ng-repeat="user in users"
+            class="list-group-item" ng-class="{active: isSelected(user)}"
+            ng-click="select(user)">
+            {{user.name}}
+        </li>
+    </ul>
+
+    <button ng-click="create()" class="btn btn-primary" style="width: 100%;">Create</button>
+
+</div>
