@@ -26,7 +26,5 @@ define([], function () {
         };
 
         listActions.load();
-
-
     };
 });

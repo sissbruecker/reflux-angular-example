@@ -24,12 +24,12 @@ define([], function () {
 
         $scope.edit = function() {
 
-            editorActions.edit($scope.user);
+            editorActions.edit($scope.selectedUser);
         };
 
         $scope.save = function() {
 
-            editorActions.save($scope.user);
+            editorActions.save();
         };
 
         $scope.cancel = function() {
